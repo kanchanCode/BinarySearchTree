@@ -22,7 +22,7 @@ namespace Binary_Search_Tree
             binaryObj.insert(16);
 
             binaryObj.Display();
-
+            binaryObj.GetSize();
         }
     }
 }
