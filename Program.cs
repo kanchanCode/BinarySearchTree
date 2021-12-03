@@ -23,6 +23,10 @@ namespace Binary_Search_Tree
 
             binaryObj.Display();
             binaryObj.GetSize();
+
+            bool result = binaryObj.ifExist(63, binaryObj);
+            Console.WriteLine(result);
+
         }
     }
 }
