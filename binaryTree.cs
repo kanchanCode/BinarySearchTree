@@ -63,10 +63,22 @@ namespace Binary_Search_Tree
             Console.WriteLine("\nHeight of BST is"+" "+(1+this.leftCount+this.rightCount));
         }
 
-        /*public void ifExist(T element,binaryTree<T> node)
+        public bool ifExist(T element, binaryTree<T> node)
         {
-            if(node==null)
+            if (node == null)
                 return false;
-        }*/
+            if (node.NodeData.Equals(element))
+            {
+                Console.WriteLine("Element found in BST "+" "+node.NodeData);
+                result = true;
+            }
+            else
+                Console.WriteLine("Current element is {0} in BST",node.NodeData);
+            if (element.CompareTo(node.NodeData) < 0)
+                ifExist(element, node.LeftTree);
+            if (element.CompareTo(node.NodeData) > 0)
+                ifExist(element, node.RightTree);
+            return result;
+        }
     }
 }
